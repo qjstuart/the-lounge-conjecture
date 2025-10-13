@@ -1,6 +1,21 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+
+  /* TLC colors */
+  --tlc-blue: #859dc5;
+  --tlc-light-blue: #94aacd;
+  --tlc-dark-blue: #6b8bb3;
+
+  --tlc-orange: #d9712f;
+  --tlc-light-orange: #e7a376;
+  --tlc-orange-dark: #814423;
+
+  --tlc-red: #ff2d2d;
+
+  --tlc-grey: #989898;
+  --tlc-light-grey: #a5a5a5;
+  --tlc-dark-grey: #7f7f7f;
 }
 
 @media (prefers-color-scheme: dark) {

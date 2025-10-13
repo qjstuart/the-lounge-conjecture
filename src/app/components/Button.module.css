@@ -1,0 +1,41 @@
+.button {
+  /* Default variable values, can be overridden by variants */
+  --button-text: #000000;
+
+  background-color: var(--button-bg);
+  border: white solid 1px;
+  border-radius: 12px;
+  color: var(--button-text);
+  cursor: pointer;
+  font-family: inherit;
+  font-weight: 500;
+  padding-block: 0.5rem;
+  padding-inline: 1rem;
+  /* transition: background-color 0.2s ease, transform 0.1s ease; */
+}
+
+.button:hover:not(:disabled) {
+  background-color: var(--button-bg-hover);
+}
+
+.button:active:not(:disabled) {
+  background-color: var(--button-bg-active);
+  transform: scale(98%);
+}
+
+.button:disabled {
+  opacity: 60%;
+  cursor: not-allowed;
+}
+
+.primary {
+  --button-bg: var(--tlc-blue);
+  --button-bg-hover: var(--tlc-light-blue);
+  --button-bg-active: var(--tlc-dark-blue);
+}
+
+.secondary {
+  --button-bg: var(--tlc-grey);
+  --button-bg-hover: var(--tlc-light-grey);
+  --button-bg-active: var(--tlc-dark-grey);
+}
