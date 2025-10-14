@@ -1,5 +1,4 @@
 .button {
-  /* Default variable values, can be overridden by variants */
   --button-text: #000000;
 
   background-color: var(--button-bg);
