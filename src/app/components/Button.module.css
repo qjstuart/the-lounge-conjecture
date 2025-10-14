@@ -43,16 +43,16 @@
 
 /* Sizes */
 .sm {
-  padding: 0.25rem 0.75rem;
+  padding: 0.25rem 0.75rem 0rem 0.75rem;
   font-size: calc(14 / 16 * 1rem);
 }
 
 .md {
-  padding: 0.5rem 1rem;
+  padding: 0.5rem 1rem 0.3rem 1rem;
   font-size: calc(16 / 16 * 1rem);
 }
 
 .lg {
-  padding: 0.5rem 1rem;
+  padding: 0.5rem 1rem 0.25rem 1rem;
   font-size: calc(18 / 16 * 1rem);
 }
