@@ -4,14 +4,14 @@
 
   background-color: var(--button-bg);
   border: white solid 1px;
-  border-radius: 12px;
+  border-radius: 18px;
   color: var(--button-text);
   cursor: pointer;
+  display: inline-block;
   font-family: inherit;
   font-weight: 500;
-  padding-block: 0.5rem;
-  padding-inline: 1rem;
-  /* transition: background-color 0.2s ease, transform 0.1s ease; */
+  padding: 0.5rem 1rem;
+  user-select: none;
 }
 
 .button:hover:not(:disabled) {
@@ -28,6 +28,7 @@
   cursor: not-allowed;
 }
 
+/* Variants */
 .primary {
   --button-bg: var(--tlc-blue);
   --button-bg-hover: var(--tlc-light-blue);
@@ -38,4 +39,20 @@
   --button-bg: var(--tlc-grey);
   --button-bg-hover: var(--tlc-light-grey);
   --button-bg-active: var(--tlc-dark-grey);
+}
+
+/* Sizes */
+.sm {
+  padding: 0.25rem 0.75rem;
+  font-size: calc(14 / 16 * 1rem);
+}
+
+.md {
+  padding: 0.5rem 1rem;
+  font-size: calc(16 / 16 * 1rem);
+}
+
+.lg {
+  padding: 0.5rem 1rem;
+  font-size: calc(18 / 16 * 1rem);
 }

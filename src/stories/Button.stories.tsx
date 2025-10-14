@@ -47,8 +47,9 @@ type Story = StoryObj<StoryProps>;
 
 export const Primary: Story = {
   args: {
-    className: "test",
+    className: "",
     href: "https://www.theloungeconjecture.com",
+    opensInNewTab: true,
     size: "md",
     text: "Args text",
     variant: "primary",
@@ -59,13 +60,13 @@ export const Primary: Story = {
   },
 };
 
-// export const Secondary: Story = {
-//   args: {
-//     variant: "secondary",
-//     size: "md",
-//   },
-//   render: ({ buttonText, ...args }) => {
-//     console.log("args:", args);
-//     return <Button {...args}></Button>;
-//   },
-// };
+export const Secondary: Story = {
+  args: {
+    ...Primary.args,
+    variant: "secondary",
+  },
+  render: ({ buttonText, ...args }) => {
+    console.log("args:", args);
+    return <Button {...args}></Button>;
+  },
+};

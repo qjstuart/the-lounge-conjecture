@@ -5,8 +5,9 @@ import styles from "./Button.module.css";
 interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   className?: string;
   href?: string;
-  size?: "sm" | "md" | "lg";
-  text?: string;
+  opensInNewTab?: boolean;
+  size: "sm" | "md" | "lg";
+  text: string;
   variant: "primary" | "secondary";
 }
 
@@ -14,6 +15,7 @@ export default function Button(props: ButtonProps) {
   const {
     className,
     href,
+    opensInNewTab = false,
     size = "md",
     text = "Default text",
     variant = "primary",
@@ -34,7 +36,13 @@ export default function Button(props: ButtonProps) {
 
   if (href) {
     return (
-      <Link className={classNames} href={href}>
+      // NB: Link components can't be "disabled"
+      <Link
+        className={classNames}
+        href={href}
+        rel={opensInNewTab ? "noopener noreferrer" : undefined}
+        target={opensInNewTab ? "_blank" : undefined}
+      >
         {text}
       </Link>
     );
