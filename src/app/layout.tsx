@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
-import localFont from "next/font/local";
+// import localFont from "next/font/local";
 import "../assets/styles/globals.css";
 
 // const helveticaNeueLtPro = localFont({
+//   adjustFontFallback: false,
 //   declarations: [{ prop: "descent-override", value: "10%" }],
 //   src: [
 //     {
