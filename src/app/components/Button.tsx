@@ -43,14 +43,14 @@ export default function Button(props: ButtonProps) {
         rel={opensInNewTab ? "noopener noreferrer" : undefined}
         target={opensInNewTab ? "_blank" : undefined}
       >
-        {text}
+        <span className={styles.buttonText}>{text}</span>
       </Link>
     );
   }
 
   return (
     <button className={classNames} disabled={delegated.disabled} {...delegated}>
-      {text}
+      <span className={styles.buttonText}>{text}</span>
     </button>
   );
 }

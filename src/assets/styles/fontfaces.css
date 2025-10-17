@@ -1,0 +1,61 @@
+/* Base Helvetica Neue LT Pro font with overrides for each weight */
+
+/* Thin / Hairline */
+@font-face {
+  font-family: "Helvetica Neue LT Pro";
+  src: url("/fonts/helvetica-neue-lt-pro/HelveticaNeueLTProTh.woff2")
+    format("woff2");
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+
+  descent-override: 10%;
+}
+
+/* Ultra Light */
+@font-face {
+  font-family: "Helvetica Neue LT Pro";
+  src: url("/fonts/helvetica-neue-lt-pro/HelveticaNeueLTProUltLt.woff2")
+    format("woff2");
+  font-weight: 200;
+  font-style: normal;
+  font-display: swap;
+
+  descent-override: 10%;
+}
+
+/* Light */
+@font-face {
+  font-family: "Helvetica Neue LT Pro";
+  src: url("/fonts/helvetica-neue-lt-pro/HelveticaNeueLTProLt.woff2")
+    format("woff2");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+
+  descent-override: 10%;
+}
+
+/* Medium */
+@font-face {
+  font-family: "Helvetica Neue LT Pro";
+  src: url("/fonts/helvetica-neue-lt-pro/HelveticaNeueLTProMd.woff2")
+    format("woff2");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+
+  descent-override: 10%;
+}
+
+/* Bold */
+@font-face {
+  font-family: "Helvetica Neue LT Pro";
+  src: url("/fonts/helvetica-neue-lt-pro/HelveticaNeueLTProBd.woff2")
+    format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+
+  descent-override: 10%;
+}
