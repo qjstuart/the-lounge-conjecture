@@ -1,3 +1,4 @@
+import CartIcon from "@/features/cart/components/CartIcon";
 import Button from "@/ui/Button/Button";
 
 export default function Home() {
@@ -12,7 +13,9 @@ export default function Home() {
           variant="primary"
         />
       </div>
-      <div>Just some test text...</div>
+      <div>
+        <CartIcon itemCount={4} />
+      </div>
     </>
   );
 }

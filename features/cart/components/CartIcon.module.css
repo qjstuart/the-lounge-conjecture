@@ -1,0 +1,25 @@
+.cartIconContainer {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+}
+
+.cartIcon {
+  height: auto;
+  stroke: black;
+  width: calc(32 / 16 * 1rem);
+}
+
+.badge {
+  background-color: var(--tlc-orange);
+  border-radius: 50%;
+  color: white;
+  font-size: calc(12 / 16 * 1rem);
+  font-weight: bold;
+  min-width: 18px;
+  padding: 0.2rem 0.25rem;
+  position: absolute;
+  right: -10px;
+  text-align: center;
+  top: -10px;
+}
