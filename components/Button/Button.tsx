@@ -32,8 +32,6 @@ export default function Button(props: ButtonProps) {
     .filter(Boolean)
     .join(" ");
 
-  console.log("classNames: ", classNames);
-
   if (href) {
     return (
       // NB: Link components can't be "disabled"

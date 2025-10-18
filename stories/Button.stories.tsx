@@ -66,7 +66,6 @@ export const Secondary: Story = {
     variant: "secondary",
   },
   render: ({ buttonText, ...args }) => {
-    console.log("args:", args);
     return <Button {...args}></Button>;
   },
 };
