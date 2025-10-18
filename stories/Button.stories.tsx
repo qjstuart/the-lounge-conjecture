@@ -1,11 +1,9 @@
 import { Meta, StoryObj } from "@storybook/nextjs-vite";
 import { ComponentProps } from "react";
 
-import Button from "@/components/Button/Button";
+import Button from "@/ui/Button/Button";
 
-type StoryProps = ComponentProps<typeof Button> & {
-  buttonText: string;
-};
+type StoryProps = ComponentProps<typeof Button>;
 
 const meta: Meta<StoryProps> = {
   component: Button,
@@ -65,7 +63,7 @@ export const Secondary: Story = {
     ...Primary.args,
     variant: "secondary",
   },
-  render: ({ buttonText, ...args }) => {
+  render: ({ ...args }) => {
     return <Button {...args}></Button>;
   },
 };

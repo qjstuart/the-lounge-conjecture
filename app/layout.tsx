@@ -1,6 +1,7 @@
+import "../assets/styles/globals.css";
+
 import type { Metadata } from "next";
 import localFont from "next/font/local";
-import "../assets/styles/globals.css";
 
 const helveticaNeueLtPro = localFont({
   declarations: [{ prop: "descent-override", value: "0%" }],
