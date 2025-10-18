@@ -2,7 +2,11 @@ import "../assets/styles/globals.css";
 
 import type { Metadata } from "next";
 import localFont from "next/font/local";
-import path from "path";
+
+import Footer from "@/ui/footer/Footer";
+import Header from "@/ui/header/Header";
+
+import styles from "./layout.module.css";
 
 const helveticaNeueLtPro = localFont({
   declarations: [{ prop: "descent-override", value: "12%" }],
@@ -64,9 +68,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${helveticaNeueLtPro.variable} ${itcHandelGothicArabic.variable}`}
+        className={`${styles.body} ${helveticaNeueLtPro.variable} ${itcHandelGothicArabic.variable}`}
       >
-        {children}
+        <Header className={styles.header} />
+        <main className={styles.main}>{children}</main>
+        <Footer className={styles.footer} />
       </body>
     </html>
   );
