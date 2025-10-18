@@ -1,39 +1,38 @@
 import type { Metadata } from "next";
-// import localFont from "next/font/local";
+import localFont from "next/font/local";
 import "../assets/styles/globals.css";
 
-// const helveticaNeueLtPro = localFont({
-//   adjustFontFallback: false,
-//   declarations: [{ prop: "descent-override", value: "10%" }],
-//   src: [
-//     {
-//       path: "../assets/fonts/helvetica-neue-lt-pro/woff2/HelveticaNeueLTProTh.woff2",
-//       weight: "100",
-//       style: "normal",
-//     },
-//     {
-//       path: "../assets/fonts/helvetica-neue-lt-pro/woff2/HelveticaNeueLTProUltLt.woff2",
-//       weight: "200",
-//       style: "normal",
-//     },
-//     {
-//       path: "../assets/fonts/helvetica-neue-lt-pro/woff2/HelveticaNeueLTProLt.woff2",
-//       weight: "300",
-//       style: "normal",
-//     },
-//     {
-//       path: "../assets/fonts/helvetica-neue-lt-pro/woff2/HelveticaNeueLTProMd.woff2",
-//       weight: "500",
-//       style: "normal",
-//     },
-//     {
-//       path: "../assets/fonts/helvetica-neue-lt-pro/woff2/HelveticaNeueLTProBd.woff2",
-//       weight: "700",
-//       style: "normal",
-//     },
-//   ],
-//   variable: "--font-helvetica-neue-lt-pro",
-// });
+const helveticaNeueLtPro = localFont({
+  declarations: [{ prop: "descent-override", value: "10%" }],
+  src: [
+    {
+      path: "../assets/fonts/helvetica-neue-lt-pro/woff2/HelveticaNeueLTProTh.woff2",
+      weight: "100",
+      style: "normal",
+    },
+    {
+      path: "../assets/fonts/helvetica-neue-lt-pro/woff2/HelveticaNeueLTProUltLt.woff2",
+      weight: "200",
+      style: "normal",
+    },
+    {
+      path: "../assets/fonts/helvetica-neue-lt-pro/woff2/HelveticaNeueLTProLt.woff2",
+      weight: "300",
+      style: "normal",
+    },
+    {
+      path: "../assets/fonts/helvetica-neue-lt-pro/woff2/HelveticaNeueLTProMd.woff2",
+      weight: "500",
+      style: "normal",
+    },
+    {
+      path: "../assets/fonts/helvetica-neue-lt-pro/woff2/HelveticaNeueLTProBd.woff2",
+      weight: "700",
+      style: "normal",
+    },
+  ],
+  variable: "--font-helvetica-neue-lt-pro",
+});
 
 export const metadata: Metadata = {
   title: "The Lounge Conjecture",
@@ -47,7 +46,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body className={`${helveticaNeueLtPro.variable}`}>{children}</body>
     </html>
   );
 }

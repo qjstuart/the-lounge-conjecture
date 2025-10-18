@@ -1,4 +1,11 @@
-/* Base Helvetica Neue LT Pro font with overrides for each weight */
+/* 
+  The purpose of this file is to serve as a workaround for Turbopack not handling font declarations.
+  See https://github.com/vercel/next.js/issues/82822 for more information.
+  A better workaround has been found, namely to switch back to Webpack.
+  Therefore, this file is currently not being used anywhere but will not be deleted for now. 
+*/
+
+/* Helvetica Neue LT Pro font with overrides for each weight */
 
 /* Thin  */
 @font-face {
