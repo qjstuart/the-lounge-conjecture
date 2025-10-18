@@ -1,0 +1,54 @@
+.banner {
+  align-items: center;
+  background-color: var(--tlc-blue);
+  border-radius: 2rem;
+  color: var(--background);
+  display: flex;
+  gap: clamp(0.25rem, 2vw, 0.6rem);
+  justify-content: space-between;
+  max-width: 768px;
+  padding: clamp(0.25rem, 1vw, 0.5rem) clamp(1rem, 4vw, 1.2rem);
+}
+
+.adapter-icon {
+  fill: none;
+  flex-shrink: 0;
+  height: auto;
+  width: clamp(calc(24 / 16 * 1rem), 8vw, calc(28 / 16 * 1rem));
+}
+
+.text {
+  align-items: baseline;
+  display: flex;
+  flex: 1 1 auto;
+  gap: 0.75rem;
+  justify-content: space-between;
+  min-width: 0;
+  overflow: hidden;
+}
+
+.title {
+  flex-shrink: 0;
+  font-family: var(--font-itc-handel-gothic-arabic);
+  font-size: clamp(calc(22 / 16 * 1rem), 7vw, calc(26 / 16 * 1rem));
+  font-weight: 700;
+  text-transform: uppercase;
+  user-select: none;
+}
+
+.message {
+  font-size: clamp(calc(12 / 16 * 1rem), 3vw, calc(16 / 16 * 1rem));
+  font-weight: 300;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-wrap: nowrap;
+  user-select: none;
+  white-space: nowrap;
+}
+
+.cart-icon {
+  align-self: end;
+  flex-shrink: 0;
+  width: clamp(calc(24 / 16 * 1rem), 8vw, calc(32 / 16 * 1rem));
+}

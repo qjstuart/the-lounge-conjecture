@@ -2,12 +2,19 @@
   cursor: pointer;
   display: inline-block;
   position: relative;
+  user-select: none;
+}
+
+.cartIconContainer:active:not(:disabled) {
+  transform: scale(98%);
 }
 
 .cartIcon {
   height: auto;
+  max-width: calc(32 / 16 * 1rem);
   stroke: black;
-  width: calc(32 / 16 * 1rem);
+  user-select: none;
+  width: 100%;
 }
 
 .badge {
@@ -17,7 +24,7 @@
   font-size: calc(12 / 16 * 1rem);
   font-weight: bold;
   min-width: 18px;
-  padding: 0.2rem 0.25rem;
+  padding: 0.2rem 0.25rem 0rem 0.25rem;
   position: absolute;
   right: -10px;
   text-align: center;
