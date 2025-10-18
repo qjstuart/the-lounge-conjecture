@@ -2,17 +2,18 @@ import "../assets/styles/globals.css";
 
 import type { Metadata } from "next";
 import localFont from "next/font/local";
+import path from "path";
 
 const helveticaNeueLtPro = localFont({
-  declarations: [{ prop: "descent-override", value: "0%" }],
+  declarations: [{ prop: "descent-override", value: "12%" }],
   src: [
     {
-      path: "../assets/fonts/helvetica-neue-lt-pro/woff2/HelveticaNeueLTProTh.woff2",
+      path: "../assets/fonts/helvetica-neue-lt-pro/woff2/HelveticaNeueLTProUltLt.woff2",
       weight: "100",
       style: "normal",
     },
     {
-      path: "../assets/fonts/helvetica-neue-lt-pro/woff2/HelveticaNeueLTProUltLt.woff2",
+      path: "../assets/fonts/helvetica-neue-lt-pro/woff2/HelveticaNeueLTProTh.woff2",
       weight: "200",
       style: "normal",
     },
@@ -35,6 +36,21 @@ const helveticaNeueLtPro = localFont({
   variable: "--font-helvetica-neue-lt-pro",
 });
 
+const itcHandelGothicArabic = localFont({
+  declarations: [
+    { prop: "ascent-override", value: "80%" },
+    { prop: "descent-override", value: "16%" },
+  ],
+  src: [
+    {
+      path: "../assets/fonts/itc-handel-gothic-arabic/itc-handel-gothic-arabic-heavy.woff2",
+      weight: "900",
+      style: "normal",
+    },
+  ],
+  variable: "--font-itc-handel-gothic-arabic",
+});
+
 export const metadata: Metadata = {
   title: "The Lounge Conjecture",
   description: "The official site of The Lounge Conjecture",
@@ -47,7 +63,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${helveticaNeueLtPro.variable}`}>{children}</body>
+      <body
+        className={`${helveticaNeueLtPro.variable} ${itcHandelGothicArabic.variable}`}
+      >
+        {children}
+      </body>
     </html>
   );
 }
