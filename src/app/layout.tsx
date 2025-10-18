@@ -3,7 +3,7 @@ import localFont from "next/font/local";
 import "../assets/styles/globals.css";
 
 const helveticaNeueLtPro = localFont({
-  declarations: [{ prop: "descent-override", value: "10%" }],
+  declarations: [{ prop: "descent-override", value: "0%" }],
   src: [
     {
       path: "../assets/fonts/helvetica-neue-lt-pro/woff2/HelveticaNeueLTProTh.woff2",
