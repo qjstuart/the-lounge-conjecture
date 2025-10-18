@@ -52,3 +52,18 @@
   flex-shrink: 0;
   width: clamp(calc(24 / 16 * 1rem), 8vw, calc(32 / 16 * 1rem));
 }
+
+.path-1 {
+  fill: #d9712f;
+}
+
+.path-2 {
+  fill: white;
+  fill-opacity: 0.15;
+}
+
+.path-3 {
+  mask: url("#path-1-inside-1_485_7");
+  stroke: #513838;
+  stroke-width: 2;
+}
