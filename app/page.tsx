@@ -17,7 +17,7 @@ export default function Home() {
       <div className="pt">
         <Banner
           message="...is where the heart is"
-          title="Home"
+          title="Discography"
           CartIcon={<CartIcon itemCount={1} />}
         />
       </div>

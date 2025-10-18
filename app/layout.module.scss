@@ -1,7 +1,10 @@
 .body {
   display: flex;
   flex-direction: column;
+  margin-inline: auto;
+  max-width: 800px;
   min-height: 100vh;
+  padding: calc(24 / 16 * 1rem) calc(16 / 16 * 1rem);
 }
 
 .header {

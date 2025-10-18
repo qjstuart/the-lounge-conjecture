@@ -6,7 +6,7 @@ import localFont from "next/font/local";
 import Footer from "@/ui/footer/Footer";
 import Header from "@/ui/header/Header";
 
-import styles from "./layout.module.css";
+import styles from "./layout.module.scss";
 
 const helveticaNeueLtPro = localFont({
   declarations: [{ prop: "descent-override", value: "12%" }],
