@@ -1,0 +1,17 @@
+// Fluid clamp mixin for any CSS property
+@function fluid-clamp($min-value, $max-value, $min-vw, $max-vw) {
+  // Slope (px per 1vw)
+  // The slope represents how much the property should increase per vw unit.
+  $slope: ($max-value - $min-value) / ($max-vw - $min-vw) * 100;
+
+  // Intercept (same units as $min-value and $max-value)
+  // The intercept ensures that at $min-vw the property is $min-value and at $max-vw the property is $max-value.
+  $intercept: $min-value - calc($slope * $min-vw / 100);
+
+  @return clamp(#{$min-value}, #{$intercept} + #{$slope}vw, #{$max-value});
+}
+
+// Optional mixin wrapper for property
+@mixin fluid-property($property, $min-value, $max-value, $min-vw, $max-vw) {
+  #{$property}: fluid-clamp($min-value, $max-value, $min-vw, $max-vw);
+}

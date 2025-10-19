@@ -1,6 +1,6 @@
 import React, { ReactNode } from "react";
 
-import styles from "./Banner.module.css";
+import styles from "./Banner.module.scss";
 
 interface BannerProps {
   title: string;

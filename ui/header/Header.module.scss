@@ -1,0 +1,31 @@
+.mobile-header {
+  align-items: center;
+  display: flex;
+  gap: clamp(calc(6 / 16 * 1rem), 2vw, calc(16 / 16 * 1rem));
+  justify-content: space-between;
+  overflow: hidden;
+  padding-inline: 0.5rem;
+
+  .hamburger-icon {
+    fill: var(--foreground);
+    flex: none;
+    width: fluid-clamp(
+      16px,
+      28px,
+      $screen-width-mobile-min,
+      $screen-width-mobile-max
+    );
+  }
+
+  .header-title {
+    font-family: var(--font-itc-handel-gothic-arabic);
+    font-size: fluid-clamp(
+      18px,
+      32px,
+      $screen-width-mobile-min,
+      $screen-width-mobile-max
+    );
+    text-transform: uppercase;
+    text-wrap: nowrap;
+  }
+}
