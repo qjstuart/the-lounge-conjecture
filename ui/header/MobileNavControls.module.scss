@@ -1,0 +1,68 @@
+.hamburgerButton {
+  background: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+  font: inherit;
+  color: inherit;
+  cursor: pointer;
+
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+
+  &:focus-visible {
+    outline-color: #0070f3; /* or your theme focus color */
+  }
+
+  .hamburgerIcon {
+    fill: var(--foreground);
+    flex: none;
+    width: fluid-clamp(
+      16px,
+      28px,
+      $screen-width-mobile-min,
+      $screen-width-mobile-max
+    );
+  }
+}
+
+.sidebar {
+  align-items: center;
+  background-color: grey;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  inset: 0;
+  padding: 1.5rem 1rem;
+  pointer-events: none;
+  position: fixed;
+  transform: translateX(-100%);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  width: fluid-clamp(
+    250px,
+    300px,
+    $screen-width-mobile-min,
+    $screen-width-mobile-max
+  );
+  z-index: 2;
+}
+
+.overlay {
+  background-color: black;
+  cursor: pointer;
+  inset: 0;
+  opacity: 40%;
+  position: fixed;
+  z-index: 2;
+}
+
+.open {
+  opacity: 1;
+  pointer-events: auto;
+  transform: translateX(0);
+}
+
+.mobileNav {
+  display: flex;
+  flex-direction: column;
+}
