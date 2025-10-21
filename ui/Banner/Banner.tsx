@@ -8,6 +8,7 @@ interface BannerProps {
   CartIcon: ReactNode; // Cart icon (component) on RHS
 }
 
+// TODO: Eventually stop accepting CartIcon as prop and instead manage everything internally.
 export default function Banner(props: BannerProps) {
   const { title, message, CartIcon } = props;
 
