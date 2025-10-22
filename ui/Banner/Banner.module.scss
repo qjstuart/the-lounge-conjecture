@@ -2,10 +2,10 @@
 
 .banner {
   align-items: center;
-  background-color: var(--tlc-blue);
+  background-color: $tlc-blue;
   border-radius: 2rem;
-  border: 1px solid white;
-  color: var(--background);
+  border: 1px solid var(--foreground);
+  color: #000000;
   display: flex;
   gap: clamp(0.25rem, 2vw, 0.6rem);
   justify-content: space-between;
