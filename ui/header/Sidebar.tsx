@@ -1,27 +1,57 @@
 import Link from "next/link";
+import { useEffect, useState } from "react";
 
-import styles from "./MobileNavControls.module.scss";
+import styles from "./Sidebar.module.scss";
 
 // TODO: Pass in list of links and map to <Link /> elements?
-export default function Sidebar() {
+export default function Sidebar({ isOpen }: { isOpen: boolean }) {
+  const [safeToApplyTransition, setSafeToApplyTransition] = useState(false);
+
+  // Wait for a negligible amount of time (0ms) just so the browser renders
+  // the sidebar first without any transition on the transform property.
+  // This prevents the sidebar from appearing or flashing on page load.
+  useEffect(() => {
+    const id = setTimeout(() => setSafeToApplyTransition(true), 0);
+    return () => clearTimeout(id);
+  }, []);
+
   return (
-    <div className={`${styles.sidebar} ${styles.open}`}>
-      <nav className={styles.mobileNav}>
-        <ul>
-          <li>
-            <Link href="/home">Home</Link>
+    <div
+      className={`${styles.sidebar} ${isOpen ? styles.open : ""} ${
+        safeToApplyTransition ? styles.sidebarTransition : ""
+      }`}
+    >
+      {/* TODO: Add graphic / asset / links? */}
+      <div className={styles.sidebarHeader}>
+        <span>Logo / Asset?</span>
+        <span>Links?</span>
+      </div>
+      <nav>
+        <ul className={styles.navLinksUl}>
+          <li className={styles.navLinkLi}>
+            <Link className={styles.navLink} href="/home">
+              Home
+            </Link>
           </li>
-          <li>
-            <Link href="/discography">Discography</Link>
+          <li className={styles.navLinkLi}>
+            <Link className={styles.navLink} href="/discography">
+              Discography
+            </Link>
           </li>
-          <li>
-            <Link href="/hifi">Hi-Fi</Link>
+          <li className={styles.navLinkLi}>
+            <Link className={styles.navLink} href="/hifi">
+              Hi-Fi
+            </Link>
           </li>
-          <li>
-            <Link href="/shop">Shop</Link>
+          <li className={styles.navLinkLi}>
+            <Link className={styles.navLink} href="/shop">
+              Shop
+            </Link>
           </li>
-          <li>
-            <Link href="/guestbook">Guestbook</Link>
+          <li className={styles.navLinkLi}>
+            <Link className={styles.navLink} href="/guestbook">
+              Guestbook
+            </Link>
           </li>
         </ul>
       </nav>
