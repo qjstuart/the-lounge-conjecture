@@ -30,14 +30,14 @@
 /* Variants */
 .primary {
   --button-bg: var(--tlc-blue);
-  --button-bg-hover: var(--tlc-light-blue);
-  --button-bg-active: var(--tlc-dark-blue);
+  --button-bg-hover: var(--tlc-blue-light);
+  --button-bg-active: var(--tlc-blue-dark);
 }
 
 .secondary {
   --button-bg: var(--tlc-grey);
-  --button-bg-hover: var(--tlc-light-grey);
-  --button-bg-active: var(--tlc-dark-grey);
+  --button-bg-hover: var(--tlc-grey-light);
+  --button-bg-active: var(--tlc-grey-dark);
 }
 
 /* Sizes */
