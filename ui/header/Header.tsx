@@ -7,7 +7,7 @@ export default function Header() {
       {/* Mobile header */}
       <div className={styles.mobileHeader}>
         <MobileNavControls />
-        <span className={styles.headerTitle}>The Lounge Conjecture</span>
+        <span className={styles.mobileHeaderTitle}>The Lounge Conjecture</span>
       </div>
 
       {/* TODO: Desktop header */}

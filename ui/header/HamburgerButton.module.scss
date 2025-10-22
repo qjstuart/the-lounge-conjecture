@@ -1,0 +1,25 @@
+.hamburgerButton {
+  background: none;
+  border: none;
+  display: flex;
+  padding: 0;
+  margin: 0;
+  font: inherit;
+  color: inherit;
+  cursor: pointer;
+}
+
+.hamburgerButton:focus-visible {
+  outline: 2px solid $focus-visible;
+}
+
+.hamburgerIcon {
+  fill: var(--foreground);
+  flex: none;
+  width: fluid-clamp(
+    16px,
+    28px,
+    $screen-width-mobile-min,
+    $screen-width-mobile-max
+  );
+}

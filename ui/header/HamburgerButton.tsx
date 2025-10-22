@@ -1,6 +1,6 @@
 "use client";
 
-import styles from "./MobileNavControls.module.scss";
+import styles from "./HamburgerButton.module.scss";
 
 interface HamburgerButtonProps {
   onClick: () => void;
