@@ -1,3 +1,5 @@
+@use "@/assets/styles/variables";
+
 .cartIconContainer {
   cursor: pointer;
   display: inline-block;
@@ -18,13 +20,13 @@
 }
 
 .badge {
-  background-color: var(--tlc-orange);
+  background-color: #{variables.$tlc-orange};
   border-radius: 50%;
   color: white;
   font-size: calc(12 / 16 * 1rem);
   font-weight: bold;
   min-width: 18px;
-  padding: 0.2rem 0.25rem 0rem 0.25rem;
+  padding: 0.2rem 0.25rem 0.1rem 0.25rem;
   position: absolute;
   right: -10px;
   text-align: center;

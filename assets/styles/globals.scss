@@ -1,4 +1,4 @@
-@use "@/assets/styles/variables" as *;
+@use "@/assets/styles/variables";
 
 * {
   box-sizing: border-box;
@@ -7,13 +7,13 @@
 }
 
 :root {
-  --background: #{$background};
-  --foreground: #{$foreground};
+  --background: #{variables.$background};
+  --foreground: #{variables.$foreground};
 }
 
 [data-theme="light"] {
-  --background: #{$background-light};
-  --foreground: #{$foreground-light};
+  --background: #{variables.$background-light};
+  --foreground: #{variables.$foreground-light};
 }
 
 body {

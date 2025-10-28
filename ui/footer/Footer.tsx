@@ -1,3 +1,5 @@
+import styles from "./Footer.module.scss";
+
 interface FooterProps {
   className: string;
 }

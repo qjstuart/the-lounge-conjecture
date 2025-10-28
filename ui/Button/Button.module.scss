@@ -1,3 +1,5 @@
+@use "@/assets/styles/variables";
+
 .button {
   --button-text: #000000;
 
@@ -29,30 +31,29 @@
 
 /* Variants */
 .primary {
-  --button-bg: var(--tlc-blue);
-  --button-bg-hover: var(--tlc-blue-light);
-  --button-bg-active: var(--tlc-blue-dark);
+  --button-bg: #{variables.$tlc-blue};
+  --button-bg-hover: #{variables.$tlc-blue-light};
+  --button-bg-active: #{variables.$tlc-blue-dark};
 }
 
 .secondary {
-  --button-bg: var(--tlc-grey);
-  --button-bg-hover: var(--tlc-grey-light);
-  --button-bg-active: var(--tlc-grey-dark);
+  --button-bg: #{variables.$tlc-grey};
+  --button-bg-hover: #{variables.$tlc-grey-light};
+  --button-bg-active: #{variables.$tlc-grey-dark};
 }
 
 /* Sizes */
 .sm {
-  padding: 0.25rem 0.75rem 0rem 0.75rem;
+  padding: 0.25rem 0.75rem;
   font-size: calc(14 / 16 * 1rem);
 }
 
 .md {
-  /* padding: 0.5rem 1rem 0.3rem 1rem; */
   padding: 0.5rem 1rem;
   font-size: calc(16 / 16 * 1rem);
 }
 
 .lg {
-  padding: 0.5rem 1rem 0.25rem 1rem;
+  padding: 0.5rem 1rem;
   font-size: calc(18 / 16 * 1rem);
 }

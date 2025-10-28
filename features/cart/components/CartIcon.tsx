@@ -1,6 +1,4 @@
-import React from "react";
-
-import styles from "./CartIcon.module.css";
+import styles from "./CartIcon.module.scss";
 
 interface CartIconProps {
   itemCount: number;
