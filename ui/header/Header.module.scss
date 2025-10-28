@@ -1,3 +1,6 @@
+@use "@/assets/styles/variables";
+@use "@/assets/styles/mixins";
+
 .mobileHeader {
   align-items: center;
   display: flex;
@@ -9,11 +12,11 @@
 
 .mobileHeaderTitle {
   font-family: var(--font-itc-handel-gothic-arabic);
-  font-size: fluid-clamp(
+  font-size: mixins.fluid-clamp(
     18px,
     32px,
-    $screen-width-mobile-min,
-    $screen-width-mobile-max
+    variables.$screen-width-mobile-min,
+    variables.$screen-width-mobile-max
   );
   text-transform: uppercase;
   text-wrap: nowrap;

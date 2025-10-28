@@ -1,3 +1,6 @@
+@use "@/assets/styles/variables";
+@use "@/assets/styles/mixins";
+
 .hamburgerButton {
   background: none;
   border: none;
@@ -10,16 +13,16 @@
 }
 
 .hamburgerButton:focus-visible {
-  outline: 2px solid $focus-visible;
+  outline: 2px solid variables.$focus-visible;
 }
 
 .hamburgerIcon {
   fill: var(--foreground);
   flex: none;
-  width: fluid-clamp(
+  width: mixins.fluid-clamp(
     16px,
     28px,
-    $screen-width-mobile-min,
-    $screen-width-mobile-max
+    variables.$screen-width-mobile-min,
+    variables.$screen-width-mobile-max
   );
 }

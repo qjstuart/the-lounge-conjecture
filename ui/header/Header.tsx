@@ -1,9 +1,9 @@
 import styles from "./Header.module.scss";
 import MobileNavControls from "./MobileNavControls";
 
-export default function Header() {
+export default function Header({ className }: { className: string }) {
   return (
-    <header>
+    <header className={className}>
       {/* Mobile header */}
       <div className={styles.mobileHeader}>
         <MobileNavControls />

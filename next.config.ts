@@ -1,17 +1,10 @@
 import type { NextConfig } from "next";
 
-const sassOptions = {
-  includePaths: ["assets/styles"],
-  additionalData: `
-    @use "variables" as *;
-    @use "mixins" as *;
-  `,
-};
+const sassOptions = {};
 
 const nextConfig: NextConfig = {
   sassOptions: {
     ...sassOptions,
-    implementation: "sass-embedded",
   },
 };
 

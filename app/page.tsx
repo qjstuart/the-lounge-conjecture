@@ -1,6 +1,5 @@
 import CartIcon from "@/features/cart/components/CartIcon";
 import Banner from "@/ui/banner/Banner";
-import Button from "@/ui/button/Button";
 
 export default function Home() {
   return (

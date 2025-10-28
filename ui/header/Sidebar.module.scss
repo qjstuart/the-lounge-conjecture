@@ -1,14 +1,17 @@
+@use "@/assets/styles/variables";
+@use "@/assets/styles/mixins";
+
 .sidebar {
   background-color: var(--background);
   inset: 0;
   pointer-events: none;
   position: fixed;
   transform: translateX(-100%);
-  width: fluid-clamp(
+  width: mixins.fluid-clamp(
     250px,
     300px,
-    $screen-width-mobile-min,
-    $screen-width-mobile-max
+    variables.$screen-width-mobile-min,
+    variables.$screen-width-mobile-max
   );
   z-index: 2;
 
@@ -38,7 +41,7 @@
 
 .navLinkLi {
   padding: 1rem;
-  border-bottom: 1px solid rgba($tlc-grey, 25%);
+  border-bottom: 1px solid rgba(variables.$tlc-grey, 25%);
   font-weight: 700;
   text-transform: uppercase;
 }
@@ -48,5 +51,5 @@
 }
 
 .navLink:focus-visible {
-  outline: 2px solid $focus-visible;
+  outline: 2px solid variables.$focus-visible;
 }

@@ -1,8 +1,9 @@
 // TODO: replace clamp() with fluid-clamp()
+@use "@/assets/styles/variables";
 
 .banner {
   align-items: center;
-  background-color: $tlc-blue;
+  background-color: variables.$tlc-blue;
   border-radius: 2rem;
   border: 1px solid var(--foreground);
   color: #000000;
