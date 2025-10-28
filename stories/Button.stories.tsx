@@ -46,12 +46,12 @@ type Story = StoryObj<StoryProps>;
 export const Primary: Story = {
   args: {
     className: "",
-    href: "https://www.theloungeconjecture.com",
+    href: "",
     opensInNewTab: true,
     size: "md",
     text: "Args text",
     variant: "primary",
-    disabled: true,
+    disabled: false,
   },
   render: ({ ...args }) => {
     return <Button {...args}></Button>;
