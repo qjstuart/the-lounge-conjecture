@@ -9,7 +9,7 @@ import Header from "@/ui/header/Header";
 import styles from "./layout.module.scss";
 
 const helveticaNeueLtPro = localFont({
-  declarations: [{ prop: "descent-override", value: "12%" }],
+  declarations: [{ prop: "descent-override", value: "0%" }],
   src: [
     {
       path: "../assets/fonts/helvetica-neue-lt-pro/woff2/HelveticaNeueLTProUltLt.woff2",
