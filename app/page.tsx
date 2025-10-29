@@ -1,14 +1,10 @@
-import CartIcon from "@/features/cart/components/CartIcon";
 import Banner from "@/ui/banner/Banner";
 
 export default function Home() {
   return (
     <>
-      <Banner
-        message="...is where the heart is"
-        title="home"
-        CartIcon={<CartIcon itemCount={0} />}
-      />
+      {/* <Button text="Test" variant="primary" size="lg" /> */}
+      <Banner message="...is where the heart is" title="home" />
       <div className="pt">
         Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptate
         magni quaerat, accusamus aperiam voluptas esse debitis, ea perspiciatis
