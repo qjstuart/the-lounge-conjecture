@@ -1,16 +1,16 @@
-import React, { ReactNode } from "react";
+import { ReactNode } from "react";
+
+import CartIcon from "@/features/cart/components/CartIcon";
 
 import styles from "./Banner.module.scss";
 
 interface BannerProps {
   title: string;
   message: string;
-  CartIcon: ReactNode; // Cart icon (component) on RHS
 }
 
-// TODO: Eventually stop accepting CartIcon as prop and instead manage everything internally.
 export default function Banner(props: BannerProps) {
-  const { title, message, CartIcon } = props;
+  const { title, message } = props;
 
   return (
     <div className={styles.banner}>
@@ -42,7 +42,9 @@ export default function Banner(props: BannerProps) {
         <h1 className={styles.title}>{title}</h1>
         <span className={styles.message}>{message}</span>
       </div>
-      <div className={styles["cart-icon"]}>{CartIcon}</div>
+      <div className={styles["cart-icon"]}>
+        <CartIcon />
+      </div>
     </div>
   );
 }
