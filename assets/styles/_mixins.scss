@@ -15,3 +15,8 @@
 @mixin fluid-property($property, $min-value, $max-value, $min-vw, $max-vw) {
   #{$property}: fluid-clamp($min-value, $max-value, $min-vw, $max-vw);
 }
+
+// Mixin for setting drop shadow on desktop header images
+@mixin drop-shadow($color) {
+  filter: drop-shadow(0px 0px 80px $color);
+}

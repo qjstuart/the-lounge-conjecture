@@ -8,6 +8,10 @@
   justify-content: space-between;
   overflow: hidden;
   padding-inline: 0.5rem;
+
+  @media (min-width: 768px) {
+    display: none;
+  }
 }
 
 .mobileHeaderTitle {
@@ -24,4 +28,56 @@
 }
 
 .desktopHeader {
+  display: none;
+
+  @media (min-width: 768px) {
+    align-items: center;
+    display: flex;
+    gap: 1rem;
+    justify-content: space-between;
+  }
+}
+
+.desktopHeaderTitleAndNav {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.desktopHeaderTitle {
+  font-size: calc(48 / 16 * 1rem);
+  font-family: var(--font-itc-handel-gothic-arabic);
+  text-transform: uppercase;
+}
+
+.desktopHeaderImageContainer {
+  position: relative;
+  flex: auto;
+  margin-inline: auto;
+  height: 75px;
+
+  .desktopHeaderImage {
+    margin-right: auto;
+    object-fit: contain;
+  }
+
+  .dropShadowTurntable {
+    @include mixins.drop-shadow(variables.$drop-shadow-turntable);
+  }
+
+  .dropShadowTapeMachine {
+    @include mixins.drop-shadow(variables.$drop-shadow-tape-machine);
+  }
+
+  .dropShadowCdj {
+    @include mixins.drop-shadow(variables.$drop-shadow-cdj);
+  }
+
+  .dropShadowFlightCase {
+    @include mixins.drop-shadow(variables.$drop-shadow-flight-case);
+  }
+
+  .dropShadowSampler {
+    @include mixins.drop-shadow(variables.$drop-shadow-sampler);
+  }
 }

@@ -1,0 +1,12 @@
+.desktopHeaderNav {
+  ul {
+    display: flex;
+    justify-content: space-between;
+    text-transform: uppercase;
+    text-wrap: nowrap;
+    user-select: none;
+    list-style: none;
+    font-weight: 200;
+    font-size: calc(20 / 16 * 1rem);
+  }
+}

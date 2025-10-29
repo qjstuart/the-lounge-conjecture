@@ -1,3 +1,7 @@
+import Link from "next/link";
+
+import DesktopHeaderImage from "./DesktopHeaderImage";
+import DesktopHeaderNav from "./DesktopHeaderNav";
 import styles from "./Header.module.scss";
 import MobileNavControls from "./MobileNavControls";
 
@@ -7,11 +11,22 @@ export default function Header({ className }: { className: string }) {
       {/* Mobile header */}
       <div className={styles.mobileHeader}>
         <MobileNavControls />
-        <span className={styles.mobileHeaderTitle}>The Lounge Conjecture</span>
+        <Link className={styles.mobileHeaderTitle} href="/">
+          The Lounge Conjecture
+        </Link>
       </div>
 
-      {/* TODO: Desktop header */}
-      <div className={styles.desktopHeader}></div>
+      {/* Desktop header */}
+      <div className={styles.desktopHeader}>
+        <div className={styles.desktopHeaderTitleAndNav}>
+          <Link className={styles.desktopHeaderTitle} href="/">
+            The Lounge Conjecture
+          </Link>
+          <DesktopHeaderNav />
+        </div>
+
+        <DesktopHeaderImage />
+      </div>
     </header>
   );
 }

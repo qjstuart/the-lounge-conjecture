@@ -1,0 +1,27 @@
+@use "@/assets/styles/variables";
+
+.desktopHeaderNavItem {
+  align-items: center;
+  display: flex;
+  gap: 0.4rem;
+}
+
+.navBullet {
+  background-color: #{variables.$foreground};
+  border-radius: 100%;
+  flex: auto;
+  width: calc(5 / 16 * 1rem);
+  height: calc(5 / 16 * 1rem);
+
+  &.active {
+    background-color: #{variables.$tlc-orange};
+  }
+}
+
+.desktopHeaderNavLink {
+  transition: opacity 0.2s ease-in-out;
+
+  &:hover {
+    opacity: 80%;
+  }
+}
