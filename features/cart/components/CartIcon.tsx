@@ -1,10 +1,9 @@
 import styles from "./CartIcon.module.scss";
 
-interface CartIconProps {
-  itemCount: number;
-}
+export default function CartIcon() {
+  // Hard-coded for now, will use Redux selector in future.
+  const itemCount = 8;
 
-export default function CartIcon({ itemCount }: CartIconProps) {
   return (
     <div className={styles.cartIconContainer}>
       <svg
