@@ -1,10 +1,17 @@
 import Link from "next/link";
 import { useEffect, useState } from "react";
 
+import { NAV_LINKS } from "@/config/navLinks";
+
 import styles from "./Sidebar.module.scss";
 
+interface SidebarProps {
+  isOpen: boolean;
+  onNavLinkClick: () => void;
+}
+
 // TODO: Pass in list of links and map to <Link /> elements?
-export default function Sidebar({ isOpen }: { isOpen: boolean }) {
+export default function Sidebar({ isOpen, onNavLinkClick }: SidebarProps) {
   const [safeToApplyTransition, setSafeToApplyTransition] = useState(false);
 
   // Wait for a negligible amount of time (0ms) just so the browser renders
@@ -28,31 +35,17 @@ export default function Sidebar({ isOpen }: { isOpen: boolean }) {
       </div>
       <nav>
         <ul className={styles.navLinksUl}>
-          <li className={styles.navLinkLi}>
-            <Link className={styles.navLink} href="/home">
-              Home
-            </Link>
-          </li>
-          <li className={styles.navLinkLi}>
-            <Link className={styles.navLink} href="/discography">
-              Discography
-            </Link>
-          </li>
-          <li className={styles.navLinkLi}>
-            <Link className={styles.navLink} href="/hifi">
-              Hi-Fi
-            </Link>
-          </li>
-          <li className={styles.navLinkLi}>
-            <Link className={styles.navLink} href="/shop">
-              Shop
-            </Link>
-          </li>
-          <li className={styles.navLinkLi}>
-            <Link className={styles.navLink} href="/guestbook">
-              Guestbook
-            </Link>
-          </li>
+          {NAV_LINKS.map((link) => (
+            <li className={styles.navLinkLi} key={link.href}>
+              <Link
+                className={styles.navLink}
+                href={link.href}
+                onClick={onNavLinkClick}
+              >
+                {link.title}
+              </Link>
+            </li>
+          ))}
         </ul>
       </nav>
     </div>

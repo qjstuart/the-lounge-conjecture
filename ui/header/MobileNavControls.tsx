@@ -28,7 +28,10 @@ export default function MobileNavControls() {
     <>
       <HamburgerButton onClick={() => setSidebarOpen(true)} />
       {sidebarOpen && <Overlay onClick={() => setSidebarOpen(false)} />}
-      <Sidebar isOpen={sidebarOpen} />
+      <Sidebar
+        isOpen={sidebarOpen}
+        onNavLinkClick={() => setSidebarOpen(false)}
+      />
     </>
   );
 }
