@@ -43,7 +43,7 @@ const helveticaNeueLtPro = localFont({
 const itcHandelGothicArabic = localFont({
   declarations: [
     { prop: "ascent-override", value: "80%" },
-    { prop: "descent-override", value: "16%" },
+    { prop: "descent-override", value: "0%" },
   ],
   src: [
     {
